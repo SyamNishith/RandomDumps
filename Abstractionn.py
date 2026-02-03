@@ -7,6 +7,6 @@ class Toyota(Car):
         print("mileage is 20")
 class Maruti(Car):
     def mileage(self):
-        print("mileage is 24")
+        print("mileage is 25")
 t=Toyota()
 t.mileage()
