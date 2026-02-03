@@ -1,0 +1,165 @@
+MYSQL IS A FREE AND OPEN SOURCE RELATIONAL DATABASE MANAGMENT SYSTEM(RDBMS).
+WHICH IS IDEAL FOR BOTH SMALL AND LARGE SCALE APPLICATIONS.
+MYSQL IS VERY FAST,RELIABLE,SCALABLE AND EASY TO USE.
+SQL CAN BE USED IN ANY OF THE DATABASE SYSTEMS OR TOOLS
+FOR EX:MyQL,Oracle,SqlServer
+MYSQL IS USED TO PERFORM CRUD OPERATIONS:
+C-CREATE
+R-READ
+U-UPDATE
+D-DELETE
+SQL COMMANDS:
+DDL-DATA DEFINITION LANGUAGE
+DML-DATA MODIFICATION LANGUAGE
+DCL-DATA CONTROL LANGUAGE
+TCL-TRANSCATION CONTROL LANGUAGE
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+DATA DEFINITION LANGUAGE:
+CREATE
+ALTER 
+DROP 
+TRUNCATE
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+DATA MODIFICATION LANGUAGE:
+SELECT
+UPDATE
+INSERT
+DELETE
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..
+DATA CONTROL LANGUAGE:
+GRANT
+REVOKE
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+TRANSACTION CONTROL LANGUAGE:
+COMMIT
+ROLLBACK
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..
+DATA TYPES IN SQL:
+NUMERIC-EXACT AND APPROXIMATE-->EXACT-->BIT,SMALLBIT,TINYBIT,INT,BIGINT,,DECIMAL AND APPROXIMATE-->FLOAT AND REAL
+BINARY-IMAGES
+STRING-CHAR,VARCHAR,TEXT
+DATE AND TIME-DATE,TIME,DATE AND TIME
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+COMMON DATATYPES SUPPORTED IN ANY DBMS TOOLS ARE:
+FLOAT
+INT
+CHAR
+VARCHAR(SIZE)
+DATE
+TIME
+DATETIME
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.
+FIRST WE HAVE TO CREATE DATABASE AND IN THAT DATABASE WE HAVE TO CREATE TABLES .
+COMMAND FOR CREATING DATABASE: Create database database_name;
+##every query will end with semi column;
+display databases in mysql:
+query:show databases;
+it will display all the databases in the MySQL.
+TO ENTER INTO SPECIFIC DATABASE USE A QUERY CALLED
+USE DATABASE_NAME
+THEN A PROMPT WILL DISPLAY AS DATABASE CHANGED.
+##HOW TO CREATE A TABLE WITHOUT CONSTRAINTS:
+Create table tablename (
+attribute1 datatype,
+attribute2 datatype,
+attribute3 datatype);
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+##DISPLAYING TABLES IN DATABASES:
+show tables;
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>...
+##system cls -->to clear the screen.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..
+to find out the schema of a database tables we use a query:
+desc table_name;
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..
+**INSERT DATA INTO TABLES FOR ONE ROW:
+insert into table_name(attribute1,attribute2,attribute3,attribute4)
+values(attribute1_value,attribute2_value,attribute3_value,attribute4_value);
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+*INSERT INTO TABLE FOR MULTIPLE ROWS:
+insert into table_name(attribute1,attribute2,attribute3,attribute4)
+values(attribute1_value,attribute2_value,attribute3_value,attribute4_value),
+      (attribute1_value,attribute2_value,attribute3_value,attribute4_value),
+	  (attribute1_value,attribute2_value,attribute3_value,attribute4_value),
+	  (attribute1_value,attribute2_value,attribute3_value,attribute4_value);
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+**SELECT * FROM TABLENAME;
+DISPLAYS ALL THE RECORDS PRESENT IN THE TABLE.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..
+**CONSTRAINTS:
+CONSTRAINTS ARE NOTHING BUT RULES APPLIED ON ATTRIBUTES OR FIELDS OR COLUMNS WHILE CREATING A TABLE.
+>>PRIMARY KEY
+>>NOT NULL
+>>CHECK
+>>DEFAULT
+>>UNIQUE
+>>FOREIGN KEY
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.
+PRIMARY KEY:IF AN ATTRIBUTE IS GIVEN PRIMARY KEY THEN 
+IT FOLLOWS TWO RULES
+1)NOT NULL :THE PRIMARY KEY ATTRIBUTE SHOULD HAVE A VALUE
+2) NO DUPLICATES.
+EXAMPLE:
+CREATE TABLE TABLE_NAME(
+SID INTEGER, 
+SNAME VARCHAR(30),
+BRANCH VARCHAR(30)
+COLLEGE VARCHAR(50),
+PERC FLOAT,
+PRIMARY_KEY(SID));
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+NOT NULL:IN THE SENSE THE ATTRIBUTE TO WHICH THE CONSTRIANT IS ATTACHED  MUST BE GIVEN SOME VALUE.
+IT SHOULD NOT BE LEFT EMPTY
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+CHECK:THE NAME ITSELF RESEMBLES THAT THE CONSTRAINT TO WHICH THE ATTRIBUTE IS ATTACHED CHECKS THE CONDITION DEFINED BY USER
+IF THE CONDITION SATISFIES THEN ONLY DATA IS INSERTED INTO RESPECTIVE ATTRIBUTES.
+CREATE TABLE TABLE_NAME(
+SID INTEGER, 
+SNAME VARCHAR(30),
+BRANCH VARCHAR(30)
+COLLEGE VARCHAR(50),
+PERC FLOAT,
+PRIMARY_KEY(SID));,
+CHECK(AGE>18));
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.....
+DEFAULT:
+DEFAULT IN THE SENSE THAT PARTICULAR ATTRIBUTE HAS A DEFAULT VALUE.
+CREATE TABLE TABLE_NAME(
+SID INTEGER, 
+SNAME VARCHAR(30),
+BRANCH VARCHAR(30)
+COLLEGE VARCHAR(50) DEFAULT "SVEC",
+PERC FLOAT,
+PRIMARY_KEY(SID));,
+CHECK(AGE>18));
+IF A VALUE IS PASSED INTO THE DEFAULT ATTRIBUTE THE VALUE WILL OVERRIDE THE DEFAULT VALUE 
+ELSE THE DEFAULT VALUE WILL ONLY BE ASSIGNED TO ATTRIBUTE.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+UNIQUE:
+UNIQUE IS SIMILAR TO PRIMARY KEY BUT UNIQUE ACCEPTS NULL VALUE BUT NO DUPLICATES ALLOWED.
+CREATE TABLE TABLE_NAME(
+SID INTEGER, 
+SNAME VARCHAR(30),
+BRANCH VARCHAR(30)
+COLLEGE VARCHAR(50) DEFAULT "SVEC",
+PERC FLOAT,
+CONTACT_NO INTEZER UNIQUE
+PRIMARY_KEY(SID));,
+CHECK(AGE>18));
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+FOREIGN KEY:
+FOREIGN KEY IS USED TO RELATE TWO DIFFERENT TABLES
+THE PRIMARY KEY OF ONE TABLE WILL BE A FOREIGN KEY OF OTHER TABLE.
+STUDENT TABLE:
+CREATE TABLE STUDENT(
+SID INTEGER,
+SNAME VARCHAR(30),
+CID INTEGER,
+PRIMARY KEY(SID),
+FOREIGN KEY(CID));
+ 
+COURSE TABLE:
+CREATE TABLE COURSE_DETAILS(
+CID INTEGER,
+CNAME VARCHAR(50),
+PRIMARY KEY(CID));

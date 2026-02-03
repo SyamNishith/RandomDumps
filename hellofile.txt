@@ -1,0 +1,31 @@
+Files:most of the time when we are working with data in programs we use variable to store data
+which are not permanent storage in order to store data persistently we need the concept of databases but they are in the format of rows and columns which are
+complex.soo best way to store is text files.
+Modes of files:
+open-"o"
+read -"r"
+write-"w"
+append-"a"
+if we use file with read mode we can only read file
+if we want to write file then we have to open file using write mode.
+if we say file with filename and write mode and if the file is not present it will create a new file with
+the mentioned file name.  
+'''f=open("file_handling1.txt","r")#to open the files
+#print(f.read())#to read all the content
+print(f.readline(),end="#")#to read line by line.
+f1=open("syamnishith","
+w")# if we dont have a file with filename it will create a new file.
+f1.write("hello")#write is just to write data into file it will not save
+f1=open("syamnishith","a")#append mode is used to add data to file
+f1.write(" how are you")#we can copy data from one file to another file as well
+for data in f:
+    f1.write(data)'''
+f2=open("REDBULL.jpg","rb")
+'''print(f2.read())'''
+f3=open("newphoto2.jpg","wb")
+for i in f2:
+    f3.write(i)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..
+
+
+
